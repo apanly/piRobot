@@ -18,7 +18,7 @@ def main():
         speech_to_text=google(audioInput,debugInit)
         command=speech_to_text.sst_google()
         debugInit.saytxt(command)
-        cmd=InstructionSet(command)
+        cmd=InstructionSet(command,debugInit)
         cmd.docmd()
         #audioOutput=aerophone(WAVPATH)
         #audioOutput.play()

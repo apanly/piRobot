@@ -5,36 +5,54 @@ from index.browser import Browser
 from index.singsongs import SingSongs
 class InstructionSet:
 
-    def __init__(self,txt):
+    def __init__(self,txt,debug):
         self.txt=txt
+        self.debug=debug
+        self.setCmdFlag(False)
 
     def docmd(self):
-        self.browser()
-        self.terminal()
-        self.singhappy()
+        if self.getCmdFlag()==False:
+            self.debug.saytxt("cmd:browser")
+            self.browser()
+        if self.getCmdFlag()==False:
+            self.debug.saytxt("cmd:terminal")
+            self.terminal()
+        if self.getCmdFlag()==False:
+            self.debug.saytxt("cmd:songs")
+            self.singhappy()
 
     def browser(self):
         target=Browser()
-        if self.txt.find("谷歌") > -1 :
-            target.docmd("www.google.com.hk")
-        elif self.txt.find("google")>-1 :
+        if self.txt.find("谷歌") > -1  or self.txt.find("google")>-1 :
+            self.setCmdFlag(True)
             target.docmd("www.google.com.hk")
         elif self.txt.find("百度") > -1:
+            self.setCmdFlag(True)
             target.docmd("www.baidu.com")
         elif self.txt.find("新浪") > -1:
+            self.setCmdFlag(True)
             target.docmd("www.sina.com.cn")
         elif self.txt.find("火狐") > -1:
+            self.setCmdFlag(True)
             target.docmd("ww.echocool.net")
 
 
     def terminal(self):
-        if self.txt.find("终端") > -1 :
-            os.system("gnome-terminal")
-        if self.txt.find("ternimal") > -1 :
+        if self.txt.find("终端") > -1 or self.txt.find("ternimal") > -1 :
+            self.setCmdFlag(True)
             os.system("gnome-terminal")
 
     def singhappy(self):
         target=SingSongs()
-        target.docmd()
+        if self.txt.find("首歌")>-1 or self.txt.find("听歌")>-1:
+            self.setCmdFlag(True)
+            target.docmd()
+
+    def setCmdFlag(self,modeFlag):
+        self.Flag=modeFlag
+
+    def getCmdFlag(self):
+        return self.Flag
+
 
 
