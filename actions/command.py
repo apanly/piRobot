@@ -3,6 +3,7 @@
 import os
 from index.browser import Browser
 from index.singsongs import SingSongs
+import urllib
 class InstructionSet:
 
     def __init__(self,txt,debug):
@@ -20,6 +21,8 @@ class InstructionSet:
         if self.getCmdFlag()==False:
             self.debug.saytxt("cmd:songs")
             self.singhappy()
+        if self.getCmdFlag()==False:
+            self.googleSearch()
 
     def browser(self):
         target=Browser()
@@ -47,6 +50,12 @@ class InstructionSet:
         if self.txt.find("首歌")>-1 or self.txt.find("听歌")>-1:
             self.setCmdFlag(True)
             target.docmd()
+
+    def googleSearch(self):
+        q=urllib.quote_plus((u'%s'%self.txt).encode('utf8'))
+        searchquri="https://www.google.com.hk/search?newwindow=1\&safe=active\&hl=en\&site=webhp\&source=hp\&q=%s&oq=%s"%(q,q)
+        target=Browser()
+        target.docmd(searchquri)
 
     def setCmdFlag(self,modeFlag):
         self.Flag=modeFlag
