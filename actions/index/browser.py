@@ -5,4 +5,4 @@ import os
 
 class Browser:
     def docmd(self,url):
-        os.system("firefox %s"(url))
+        os.system("firefox %s"%url)
