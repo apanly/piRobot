@@ -12,6 +12,7 @@
 * 搜索指令集需要分类，例如人物，音乐，学习，编程手册等等
 * 语音识别本地化，Julius speech recogition是一个开源的项目
 * 利用树莓派嵌入式的优势，然后开发控制tv，空调等指令
+
 #参考文档如下
 * [Linux音频编程指南](http://www.ibm.com/developerworks/cn/linux/l-audio/index.html)
 * [python pyaudio doc](http://people.csail.mit.edu/hubert/pyaudio/#docs)
