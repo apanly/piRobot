@@ -8,7 +8,9 @@ class microphone:
     def __init__(self,savepath,debug):
         self.savepath=savepath
         self.debug=debug
-
+        self.sleepflag=0
+    def getSleepFLag(self):
+        return self.sleepflag
     def getRate(self):
         return 16000
 
@@ -19,7 +21,7 @@ class microphone:
         return 5000
 
     def recordAudio(self):
-        NUM_SILENT=10
+        NUM_SILENT=20
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
         CHANNELS = 1 # 0,1
@@ -42,6 +44,7 @@ class microphone:
                 num_silent += 1
                 self.debug.saytxt("* sleeping")
             else:
+                self.sleepflag +=1
                 num_silent = 0
                 self.debug.saytxt("* active")
             if num_silent>=NUM_SILENT:
