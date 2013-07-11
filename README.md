@@ -22,4 +22,4 @@
 * [Linux音频编程指南](http://www.ibm.com/developerworks/cn/linux/l-audio/index.html)
 * [python pyaudio doc](http://people.csail.mit.edu/hubert/pyaudio/#docs)
 * [Gordons Projects](https://projects.drogon.net/raspberry-pi/wiringpi/)
-* [text to speach]( 例如这个 http://translate.google.com/translate_tts?q=%E6%AC%A2%E8%BF%8E%E5%85%89%E4%B8%B4%E4%B8%83%E5%93%A5%E7%9A%84%E5%8D%9A%E5%AE%A2&tl=zh-CN)
+* [text to speach](http://translate.google.com/translate_tts?q=%E6%AC%A2%E8%BF%8E%E5%85%89%E4%B8%B4%E4%B8%83%E5%93%A5%E7%9A%84%E5%8D%9A%E5%AE%A2&tl=zh-CN)
