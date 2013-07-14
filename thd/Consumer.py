@@ -4,6 +4,7 @@ import time
 from  stt.google import google
 from  actions.command import InstructionSet
 from gl import queue
+import os
 class Consumer(threading.Thread):
     def __init__(self,debugInit):
         threading.Thread.__init__(self)
@@ -17,6 +18,7 @@ class Consumer(threading.Thread):
                 self.debug.saytxt("comsumer file:%s"%wavpath)
                 speech_to_text=google(wavpath,self.debug)
                 command=speech_to_text.sst_google()
+                os.remove(wavpath)
                 if command:
                     self.debug.saytxt(command)
                     cmd=InstructionSet(command,self.debug)
