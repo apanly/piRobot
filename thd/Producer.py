@@ -1,6 +1,7 @@
 import threading
 from inputs.microphone import microphone
 from gl import queue
+from gl import WAVPATH
 import time
 import os
 class Producer(threading.Thread):
@@ -10,9 +11,10 @@ class Producer(threading.Thread):
 
     def run(self):
         global  queue
+        global  WAVPATH
         while 1:
             timestamps=int(time.time());
-            WAVPATH="/home/vincent/coding/python/piRobot/output%d.wav"%timestamps
+            WAVPATH=WAVPATH+"output%d.wav"%timestamps
             audioInput = microphone(WAVPATH,self.debug)
             audioInput.recordAudio()
             if audioInput.getSleepFLag() == 0:
@@ -20,5 +22,5 @@ class Producer(threading.Thread):
             else:
                 self.debug.saytxt("producter file:%s"%WAVPATH)
                 queue.put(WAVPATH)
-            time.sleep(3)
+            time.sleep(5)
 

@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path.append(".")
-from  inputs.microphone import microphone
 
 from ex.exception import NotUnderstoodException
 
