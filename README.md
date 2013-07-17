@@ -40,3 +40,4 @@
 * [text to speach](http://translate.google.com/translate_tts?q=%E6%AC%A2%E8%BF%8E%E5%85%89%E4%B8%B4%E4%B8%83%E5%93%A5%E7%9A%84%E5%8D%9A%E5%AE%A2&tl=zh-CN)
 * 搜索引擎Yahoo的分类体系及性能评价
 * [静音判断参考资料](http://ibillxia.github.io/blog/2013/05/22/audio-signal-processing-time-domain-Voice-Activity-Detection/)
+* [基于短时能量与过零率的端点检测的matlab分析 ](http://blog.csdn.net/ziyuzhao123/article/details/8932336)
