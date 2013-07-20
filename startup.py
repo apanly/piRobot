@@ -8,8 +8,14 @@ from ex.exception import NotUnderstoodException
 from outputs.debug import debug
 from thd.Consumer import  Consumer
 from thd.Producer import Producer
+from customnotify.gntpnotify import gntpnotify
 def main():
     debugInit=debug()
+    '''
+     如果用户是桌面系统,就可以提示用户信息
+    '''
+    #gntptarget=gntpnotify()
+    #gntptarget.ownnotify()
     '''
     目前准备是1个生产者 5个消费者的模型
     '''

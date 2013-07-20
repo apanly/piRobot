@@ -4,17 +4,22 @@
 #开发语言
 * python
 
-#依赖包
+#python依赖包
 * pyaudio
 * wave
 * Internet connection
+* gntp
+#linux依赖包
+* growl for linux
 #如何使用
+* 启动gol(growl on linux) 我编译安装之后路径如下/usr/local/bin/gol
 * python startup.py
 #Todolist
 
 * 多线程,网络模型如下:有一个栈专门用于接受音频,有很多个子线程从栈中抢取音频指令,对于阻塞的指令可能需要特殊处理,例如播放音乐
 * tts 将stt的指令转化为mp3内容
 * 静音判断
+* gntp 和 growl 共同结合 给用户有好提示信息
 * 搜索指令集需要分类(可以借助dbpedia)，例如人物，音乐，学习，编程手册等等
 * 语音识别本地化，Julius speech recogition是一个开源的项目
 * 利用树莓派嵌入式的优势，然后开发控制tv，空调等指令
@@ -32,6 +37,8 @@
     Reference(参考资料)、Regional(国家与地区)、
     Science(科学)、SocialScience(社会科学)、
     Society＆Culture(社会与文化)
+* 静音判断,正在研究vad技术
+* growl的gntp协议
 #参考文档如下
 
 * [Linux音频编程指南](http://www.ibm.com/developerworks/cn/linux/l-audio/index.html)
@@ -41,3 +48,6 @@
 * 搜索引擎Yahoo的分类体系及性能评价
 * [静音判断参考资料](http://ibillxia.github.io/blog/2013/05/22/audio-signal-processing-time-domain-Voice-Activity-Detection/)
 * [基于短时能量与过零率的端点检测的matlab分析 ](http://blog.csdn.net/ziyuzhao123/article/details/8932336)
+* [Google speech recognition with python](http://campus.albion.edu/squirrel/2012/03/01/google-speech-recognition-with-python/)
+* [gntp](https://github.com/kfdm/gntp)
+* [Growl For Linux](https://github.com/apanly/growl-for-linux)
