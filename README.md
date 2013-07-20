@@ -26,6 +26,7 @@
 * 搜索指令集需要分类(可以借助dbpedia)，例如人物，音乐，学习，编程手册等等
 * 语音识别本地化，Julius speech recogition是一个开源的项目
 * 利用树莓派嵌入式的优势，然后开发控制tv，空调等指令
+
 #has done
 * 录音功能，最长录音时间5S，如果中间停顿次数多余15次会提前终止此次录音
 * stt功能，将上一步的录音通过google api 翻译音频内容
@@ -42,8 +43,8 @@
     Society＆Culture(社会与文化)
 * 静音判断,正在研究vad技术
 * growl的gntp协议
-#参考文档如下
 
+#参考文档如下
 * [Linux音频编程指南](http://www.ibm.com/developerworks/cn/linux/l-audio/index.html)
 * [python pyaudio doc](http://people.csail.mit.edu/hubert/pyaudio/#docs)
 * [Gordons Projects](https://projects.drogon.net/raspberry-pi/wiringpi/)
