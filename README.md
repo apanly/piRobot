@@ -9,11 +9,14 @@
 * wave
 * Internet connection
 * gntp
+
 #linux依赖包
 * growl for linux
+
 #如何使用
 * 启动gol(growl on linux) 我编译安装之后路径如下/usr/local/bin/gol
 * python startup.py
+
 #Todolist
 
 * 多线程,网络模型如下:有一个栈专门用于接受音频,有很多个子线程从栈中抢取音频指令,对于阻塞的指令可能需要特殊处理,例如播放音乐
