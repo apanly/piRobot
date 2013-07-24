@@ -45,7 +45,7 @@
     Science(科学)、SocialScience(社会科学)、
     Society＆Culture(社会与文化)
 * 静音判断,正在研究vad技术
-* growl的gntp协议
+* growl的gntp协议  hasdone
 
 #参考文档如下
 * [Linux音频编程指南](http://www.ibm.com/developerworks/cn/linux/l-audio/index.html)
