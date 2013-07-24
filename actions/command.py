@@ -3,6 +3,7 @@
 import os
 from index.browser import Browser
 from index.singsongs import SingSongs
+from gl import SEARCH
 import urllib
 class InstructionSet:
 
@@ -52,8 +53,9 @@ class InstructionSet:
             target.docmd()
 
     def googleSearch(self):
+        global  SEARCH
         q=urllib.quote_plus((u'%s'%self.txt).encode('utf8'))
-        searchquri="https://www.google.com.hk/search?newwindow=1\&safe=active\&hl=en\&site=webhp\&source=hp\&q=%s&oq=%s"%(q,q)
+        searchquri=SEARCH%(q,q)
         target=Browser()
         target.docmd(searchquri)
 
