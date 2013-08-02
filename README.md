@@ -62,3 +62,4 @@
 * [Growl For Linux](https://github.com/apanly/growl-for-linux)
 * [语音识别实现方式之一](http://a7b.cn/2013/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/#toc_3)
 * [树莓派客厅中央控制](http://www.peiqianhuo.net/?p=28)
+* [在Ubuntu的系统下通过串口连接IOIO-OTG](http://www.oschina.net/question/1174645_116717)
