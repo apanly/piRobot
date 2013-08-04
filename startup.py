@@ -12,7 +12,7 @@ from customnotify.gntpnotify import gntpnotify
 from gl import PIDLOG
 global PIDLOG
 def Usage():
-    helpContent='Usage: sudo python startup.py start/stop/restart'
+    helpContent='Usage:  python startup.py start/stop/restart'
     print helpContent
     exit()
 #为了防止并发加入PID文件
@@ -40,20 +40,24 @@ def main():
     目前准备是1个生产者 5个消费者的模型
     '''
     try:
+        tList = []
         producerTarget=Producer(debugInit)
-        producerTarget.start()
+        tList.append(producerTarget)
         for i in range(5):
             consumerTarget=Consumer(debugInit)
-            consumerTarget.start()
-        #consumerTarget.join()
-        #producerTarget.join()
-        #for i in range(1,2):
-        #    target=Consumer(debugInit)
-        #    target.start()
-        #audioOutput=aerophone(WAVPATH)
-        #audioOutput.play()
+            tList.append(consumerTarget)
+        for t in tList:
+            t.setDaemon(1)
+            t.start()
     except NotUnderstoodException:
         debugInit.saytxt("error")
+    #Controller+C也可以终止程序
+    while True:
+        try:
+            sys.stdin.read()
+        except KeyboardInterrupt:
+            stop()
+
 
 def stop():
     if os.path.exists(PIDLOG):
@@ -61,8 +65,8 @@ def stop():
         pid=int(fd.readline())
         fd.close()
         try:
-            os.kill(pid,signal.SIGTERM)
             deletePID()
+            os.kill(pid,signal.SIGTERM)
         except:
             raise SystemExit('1:收到终止命令,退出程序')
     raise SystemExit('2:收到终止命令,退出程序')
