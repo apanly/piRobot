@@ -14,13 +14,13 @@ class Producer(threading.Thread):
         global  WAVPATH
         while 1:
             timestamps=int(time.time());
-            WAVPATH=WAVPATH+"output%d.wav"%timestamps
-            audioInput = microphone(WAVPATH,self.debug)
+            wavefilepath=WAVPATH+"output%d.wav"%timestamps
+            audioInput = microphone(wavefilepath,self.debug)
             audioInput.recordAudio()
             if audioInput.getSleepFLag() == 0:
-                os.remove(WAVPATH)
+                os.remove(wavefilepath)
             else:
-                self.debug.saytxt("producter file:%s"%WAVPATH)
-                queue.put(WAVPATH)
+                self.debug.saytxt("producter file:%s"%wavefilepath)
+                queue.put(wavefilepath)
             time.sleep(5)
 

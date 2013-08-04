@@ -3,6 +3,7 @@
 import os
 from index.browser import Browser
 from index.singsongs import SingSongs
+from tts.picotts import picotts
 from gl import SEARCH
 import urllib
 class InstructionSet:
@@ -11,8 +12,10 @@ class InstructionSet:
         self.txt=txt
         self.debug=debug
         self.setCmdFlag(False)
+        self.pico=picotts("welcome to google world")
 
     def docmd(self):
+        self.pico.onPlayer()
         if self.getCmdFlag()==False:
             self.debug.saytxt("cmd:browser")
             self.browser()
@@ -38,7 +41,7 @@ class InstructionSet:
             target.docmd("www.sina.com.cn")
         elif self.txt.find("火狐") > -1:
             self.setCmdFlag(True)
-            target.docmd("ww.echocool.net")
+            target.docmd("www.echocool.net")
 
 
     def terminal(self):
