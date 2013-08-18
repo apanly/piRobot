@@ -14,3 +14,5 @@ SEARCH="https://www.google.com.hk/search?newwindow=1\&safe=active\&hl=en\&site=w
 PIDLOG="%spiRobot.pid"%CACHEFOLDER
 
 SPEECHTTS="%spicotts.wav"%CACHEFOLDER
+
+DOUBANFM="http://douban.fm/j/mine/playlist?type=n&channel=1"
