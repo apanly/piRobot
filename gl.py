@@ -7,7 +7,7 @@ CACHEFOLDER = os.getenv('HOME') + '/.cache/piRobot/'
 if not os.path.exists(CACHEFOLDER):
     os.makedirs(CACHEFOLDER)
 
-WAVPATH="/home/vincent/coding/python/piRobot/" #用于指定录音文件存放在什么地方
+WAVPATH=CACHEFOLDER #用于指定录音文件存放在什么地方
 
 SEARCH="https://www.google.com.hk/search?newwindow=1\&safe=active\&hl=en\&site=webhp\&source=hp\&q=%s&oq=%s"
 

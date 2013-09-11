@@ -5,5 +5,5 @@ class jiebaseg:
 		self.txt=txt
 
 	def cut(self,mode=False):
-		return jieba.cut(self.txt,mode)
+		return jieba.cut(self.txt,cut_all=mode)
 
