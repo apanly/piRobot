@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 class codemapping:
     def __init__(self):
         self.mapping={}
@@ -29,10 +32,26 @@ class codemapping:
         if 'broswer' not in mapping:
             mapping['broswer']={'google':'www.google.com.hk',"百度":'www.baidu.com','新浪':'www.sina.com.cn','type':'api'}
 
-    #find the best match
+    #find the best match key
     def findBM(self,txt):
-        print "============="
-        print txt
         mapping=self.mapping
+        retval=''
         for item in mapping:
-            print item
+             index=txt.find(item)
+             if index>-1:
+                 retval=item
+                 break
+        return retval
+    def findcmdinfo(self,type,txt):
+        cmds=self.mapping[type]
+        retval=''
+        for item in cmds:
+            index=txt.find(item)
+            if index>-1:
+                retval=cmds[item]
+                break;
+        return retval
+
+
+
+
