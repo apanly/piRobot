@@ -19,6 +19,10 @@
 * 启动gol(growl on linux) 我编译安装之后路径如下/usr/local/bin/gol
 * python startup.py
 
+#系统架构图
+![家居声控系统图](http://www.echocool.net/wp-content/uploads/2013/09/sys.png)
+
+
 #Todolist
 * 静音判断
 * 搜索指令集需要分类(可以借助dbpedia)，例如人物，音乐，学习，编程手册等等
