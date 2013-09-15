@@ -1,3 +1,5 @@
+家居声控系统
+==================
 #目标
 * 开发一个全智能的语音识别机器人,期望安装在树莓派上，然后控制家里的家电，并且可以控制linux内核的笔记本等设备识别指令集
 
@@ -21,7 +23,6 @@
 
 #系统架构图
 ![家居声控系统图](http://www.echocool.net/wp-content/uploads/2013/09/sys.png)
-
 
 #Todolist
 * 静音判断
@@ -71,6 +72,6 @@
 * [语音识别实现方式之一](http://a7b.cn/2013/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/#toc_3)
 * [树莓派客厅中央控制](http://www.peiqianhuo.net/?p=28)
 * [在Ubuntu的系统下通过串口连接IOIO-OTG](http://www.oschina.net/question/1174645_116717)
-* [天气查询]http://blog.csdn.net/l_ch_g/article/details/8205817
 * [豆瓣书屋]https://api.douban.com/v2/book/search?q=%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85
 * [天气查询]http://blog.mynook.info/2012/08/18/weather-com-cn-api.html
+* [天气城市id]http://www.xiaoningmeng.com/2012/10/androids-china-weather-city-id-data/
