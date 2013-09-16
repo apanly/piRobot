@@ -75,3 +75,6 @@
 * [豆瓣书屋]https://api.douban.com/v2/book/search?q=%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85
 * [天气查询]http://blog.mynook.info/2012/08/18/weather-com-cn-api.html
 * [天气城市id]http://www.xiaoningmeng.com/2012/10/androids-china-weather-city-id-data/
+
+#Copying
+###Free use of this software is granted under the terms of the GNU Lesser General Public License (LGPL)

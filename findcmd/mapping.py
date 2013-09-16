@@ -42,15 +42,36 @@ class codemapping:
                  retval=item
                  break
         return retval
-    def findcmdinfo(self,type,txt):
-        cmds=self.mapping[type]
-        retval=''
+    def findcmdinfo(self,cmdtype,txt):
+        cmds=self.mapping[cmdtype]
+        retval={}
         for item in cmds:
             index=txt.find(item)
             if index>-1:
-                retval=cmds[item]
+                tmpret=cmds[item]
+                if type(tmpret) is dict:
+                    retval['data']=item
+                    retval['guide']='next'
+                else:
+                    retval['data']=tmpret
+                    retval['guide']='over'
+                    retval['type']=self.mapping[cmdtype]['type']
+                    retval['kind']=cmdtype
                 break;
         return retval
+    def findlastcmdinfo(self,cmdtype,skey,txt):
+        cmds=self.mapping[cmdtype][skey]
+        retval={}
+        retval['type']=self.mapping[cmdtype]['type']
+        retval['kind']=cmdtype
+        for item in cmds:
+            index=txt.find(item)
+            if index>-1:
+                tmpret=cmds[item]
+                retval['code']=tmpret
+                break
+        return retval
+
 
 
 

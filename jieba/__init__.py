@@ -69,7 +69,7 @@ def initialize(*args):
 
 		load_from_cache_fail = True
 		if os.path.exists(cache_file) and os.path.getmtime(cache_file)>os.path.getmtime(abs_path):
-			print >> sys.stderr, "loading model from cache " + cache_file
+			#print >> sys.stderr, "loading model from cache " + cache_file
 			try:
 				trie,FREQ,total,min_freq = marshal.load(open(cache_file,'rb'))
 				load_from_cache_fail = False
@@ -98,8 +98,8 @@ def initialize(*args):
 
 		initialized = True
 
-		print >> sys.stderr, "loading model cost ", time.time() - t1, "seconds."
-		print >> sys.stderr, "Trie has been built succesfully."
+		#print >> sys.stderr, "loading model cost ", time.time() - t1, "seconds."
+		#print >> sys.stderr, "Trie has been built succesfully."
 
 
 def require_initialized(fn):

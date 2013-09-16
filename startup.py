@@ -43,7 +43,7 @@ def main():
         tList = []
         producerTarget=Producer(debugInit)
         tList.append(producerTarget)
-        for i in range(5):
+        for i in range(1):
             consumerTarget=Consumer(debugInit)
             tList.append(consumerTarget)
         for t in tList:

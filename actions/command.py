@@ -5,6 +5,7 @@ from index.browser import Browser
 from index.singsongs import SingSongs
 from tts.picotts import picotts
 from gl import SEARCH
+from findcmd.search import vsearch
 import urllib
 class InstructionSet:
 
@@ -15,6 +16,9 @@ class InstructionSet:
         self.pico=picotts("welcome to google world")
 
     def docmd(self):
+        vs=vsearch()
+        print vs.search(self.txt)
+    def docmdback(self):
         self.pico.onPlayer()
         if self.getCmdFlag()==False:
             self.debug.saytxt("cmd:browser")
