@@ -8,6 +8,7 @@ class codeconvert:
         mapping[u'空调']="air"
         mapping[u'电灯']="light"
         mapping[u'浏览器']="broswer"
+        mapping[u'天气预报']="weather"
         mapping[u'天气']="weather"
         self.mapping=mapping
     def convert(self,txt):

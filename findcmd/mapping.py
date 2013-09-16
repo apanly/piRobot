@@ -15,23 +15,27 @@ class codemapping:
         mapping=self.mapping
         if 'tv' not in mapping:
             mapping['tv']={"声音":{"大":40,"小":41},"关":42,"开":43,"type":'infrated'}
+            mapping['tv']['default']=mapping['tv']['声音']['大']
     def initair(self):
         mapping=self.mapping
         if 'air' not in mapping:
             mapping['air']={"关":42,"开":43,"温度":{"高":44,"低":45},"type":'infrated'}
+            mapping['air']['default']=mapping['air']['温度']['高']
     def initlight(self):
         mapping=self.mapping
         if 'light' not in mapping:
             mapping['light']={"关":42,"开":43,"type":'infrated'}
+            mapping['light']['default']=mapping['light']['开']
     def initweath(self):
         mapping=self.mapping
         if 'weather' not in mapping:
             mapping['weather']={'今天':'onedayweather',"现在":'liveweather','type':'api'}
+            mapping['weather']['default']=mapping['weather']['今天']
     def initbroser(self):
         mapping=self.mapping
         if 'broswer' not in mapping:
-            mapping['broswer']={'google':'www.google.com.hk',"百度":'www.baidu.com','新浪':'www.sina.com.cn','type':'api'}
-
+            mapping['broswer']={'google':'www.google.com.hk',"百度":'www.baidu.com','新浪':'www.sina.com.cn','type':'broswer'}
+            mapping['broswer']['default']=mapping['broswer']['google']
     #find the best match key
     def findBM(self,txt):
         mapping=self.mapping
