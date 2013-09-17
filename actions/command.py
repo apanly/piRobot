@@ -6,6 +6,7 @@ from index.singsongs import SingSongs
 from tts.picotts import picotts
 from gl import SEARCH
 from findcmd.search import vsearch
+from index.cam import camera
 import urllib
 class InstructionSet:
 
@@ -18,6 +19,9 @@ class InstructionSet:
     def docmd(self):
         vs=vsearch()
         print vs.search(self.txt)
+        #测试照相功能
+        #camtarget=camera()
+        #camtarget.do()
     def docmdback(self):
         self.pico.onPlayer()
         if self.getCmdFlag()==False:
