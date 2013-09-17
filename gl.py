@@ -16,3 +16,5 @@ PIDLOG="%spiRobot.pid"%CACHEFOLDER
 SPEECHTTS="%spicotts.wav"%CACHEFOLDER
 
 DOUBANFM="http://douban.fm/j/mine/playlist?type=n&channel=1"
+
+PICPATH="/home/vincent/opensource/record/"

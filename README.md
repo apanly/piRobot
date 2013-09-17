@@ -56,6 +56,7 @@
     Science(科学)、SocialScience(社会科学)、
     Society＆Culture(社会与文化)
 * 静音判断,正在研究vad技术
+* 中文文本自动纠错
 
 
 #参考文档如下
@@ -75,6 +76,7 @@
 * [豆瓣书屋]https://api.douban.com/v2/book/search?q=%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85
 * [天气查询]http://blog.mynook.info/2012/08/18/weather-com-cn-api.html
 * [天气城市id]http://www.xiaoningmeng.com/2012/10/androids-china-weather-city-id-data/
+* [浅谈中文文本自动纠错在影视剧搜索中应用与Java实现]http://www.cnblogs.com/wuren/archive/2012/12/21/2828649.html
 
 #Copying
 ###Free use of this software is granted under the terms of the GNU Lesser General Public License (LGPL)

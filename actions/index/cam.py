@@ -1,44 +1,24 @@
 #!/usr/bin/python
-#
-# python-v4l2capture
-#
-# This file is an example on how to capture a picture with
-# python-v4l2capture.
-#
-# 2009, 2010 Fredrik Portstrom
-#
-# I, the copyright holder of this file, hereby release it into the
-# public domain. This applies worldwide. In case this is not legally
-# possible: I grant anyone the right to use this work for any
-# purpose, without any conditions, unless such conditions are
-# required by law.
-
 import Image
 import select
 import v4l2capture
 import time
 import traceback
 import os
-import sys
+import sys,pygame
+from gl import PICPATH
+
+size = width, height = 1280, 1024
+speed = [2, 2]
 # Open the video device.
 video = v4l2capture.Video_device("/dev/video1")
-
-# Suggest an image size to the device. The device may choose and
-# return another size if it doesn't support the suggested one.
-size_x, size_y = video.set_format(1280, 1024)
-
-# Create a buffer to store image data in. This must be done before
-# calling 'start' if v4l2capture is compiled with libv4l2. Otherwise
-# raises IOError.
+size_x, size_y = video.set_format(size)
 video.create_buffers(1)
-
-# Send the buffer to the device. Some devices require this to be done
-# before calling 'start'.
 video.queue_all_buffers()
-
-# Start the device. This lights the LED if it's a camera that has one.
 video.start()
-# Wait for the device to fill the buffer.
+pygame.init()
+pygame.display.set_caption('视频窗口@dyx1024')
+screen = pygame.display.set_mode(size)
 while 1:
     try:
         readable , writable , exceptional =select.select([video,], [], [])
@@ -50,8 +30,14 @@ while 1:
                 try:
                     image_data = video.read_and_queue()
                     image = Image.fromstring("RGB", (size_x, size_y), image_data)
-                    image.save("/home/vincent/opensource/record/image.jpg")
+                    image.save(PICPATH+"image.jpg")
                     print "Saved image.jpg (Size: " + str(size_x) + " x " + str(size_y) + ")"
+                    #加载图像
+                    pyimage = pygame.image.load(PICPATH+"image.jpg")
+                    #传送画面
+                    screen.blit(pyimage, speed)
+                    #显示图像
+                    pygame.display.flip()
                 except IOError as e:
                     if e.errno == 11:
                         print "error"
