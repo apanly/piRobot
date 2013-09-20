@@ -78,5 +78,10 @@
 * [天气城市id]http://www.xiaoningmeng.com/2012/10/androids-china-weather-city-id-data/
 * [浅谈中文文本自动纠错在影视剧搜索中应用与Java实现]http://www.cnblogs.com/wuren/archive/2012/12/21/2828649.html
 
+#How to Contact
+##QQ:36405410
+##Email:apanly@163.com
+
+
 #Copying
 ###Free use of this software is granted under the terms of the GNU Lesser General Public License (LGPL)

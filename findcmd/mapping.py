@@ -36,6 +36,11 @@ class codemapping:
         if 'broswer' not in mapping:
             mapping['broswer']={'google':'www.google.com.hk',"百度":'www.baidu.com','新浪':'www.sina.com.cn','type':'broswer'}
             mapping['broswer']['default']=mapping['broswer']['google']
+    def initphoto(self):
+        mapping=self.mapping
+        if 'photo' not in mapping:
+            mapping['photo']={'开':'on',"关闭":'off','拍':'capture','type':'cam'}
+            mapping['photo']['default']=mapping['photo']['今天']
     #find the best match key
     def findBM(self,txt):
         mapping=self.mapping

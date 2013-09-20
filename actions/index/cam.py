@@ -49,7 +49,7 @@ class camera:
                         except IOError as e:
                             if e.errno == 11:
                                 print "error"
-                        time.sleep(0.03)
+                        time.sleep(0.01)
                 for s in writable:
                     pass
                 for s in exceptional:

@@ -10,6 +10,8 @@ class codeconvert:
         mapping[u'浏览器']="broswer"
         mapping[u'天气预报']="weather"
         mapping[u'天气']="weather"
+        mapping[u'相机']="photo"
+        mapping[u'摄像头']="photo"
         self.mapping=mapping
     def convert(self,txt):
         mapping=self.mapping
