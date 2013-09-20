@@ -16,6 +16,7 @@
 #linux依赖包
 * growl for linux
 * pico2wave
+* sudo apt-get install espeak
 
 #如何使用
 * 启动gol(growl on linux) 我编译安装之后路径如下/usr/local/bin/gol
@@ -40,7 +41,7 @@
 * 实现了 start/stop 命令功能
 * 实现了同时只有一个应用程序启动的判断
 * 在桌面环境使用growl提示用户
-* 使用pico实现了tts
+* 使用pico实现了tts->修改成e-speak (例如：espeak -vzh "郭威 我爱你")
 * gntp 和 growl 共同结合 给用户有好提示信息
 * 多线程,网络模型如下:有一个栈专门用于接受音频,有很多个子线程(或者多个进程)从栈中抢取音频指令,对于阻塞的指令可能需要特殊处理,例如播放音乐
 * 利用树莓派嵌入式的优势，然后开发控制tv，空调等指令 --PS:这个已经实现了，请关注红外控制系统[piInfrated](https://github.com/apanly/piInfrated)
@@ -77,6 +78,7 @@
 * [天气查询]http://blog.mynook.info/2012/08/18/weather-com-cn-api.html
 * [天气城市id]http://www.xiaoningmeng.com/2012/10/androids-china-weather-city-id-data/
 * [浅谈中文文本自动纠错在影视剧搜索中应用与Java实现]http://www.cnblogs.com/wuren/archive/2012/12/21/2828649.html
+* [espeak跨平台语音合成器](http://www.oschina.net/p/espeak/)
 
 #How to Contact
 ##QQ:36405410
