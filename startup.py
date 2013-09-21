@@ -36,6 +36,7 @@ def main():
     '''
     #gntptarget=gntpnotify()
     #gntptarget.ownnotify()
+    #test
     '''
     目前准备是1个生产者 5个消费者的模型
     '''

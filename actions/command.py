@@ -6,6 +6,7 @@ from index.singsongs import SingSongs
 from tts.picotts import picotts
 from gl import SEARCH
 from findcmd.search import vsearch
+from proofread.javaproofread import proofreadClient
 from index.cam import camera
 import urllib
 class InstructionSet:
@@ -17,6 +18,8 @@ class InstructionSet:
         self.pico=picotts("welcome to google world")
 
     def docmd(self):
+        prooftarget=proofreadClient(self.txt)
+        self.txt=prooftarget.do()
         vs=vsearch()
         print vs.search(self.txt)
         #测试照相功能
