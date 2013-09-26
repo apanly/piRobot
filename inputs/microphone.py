@@ -25,7 +25,7 @@ class microphone:
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
         CHANNELS = 1 # 0,1
-        RECORD_SECONDS=5
+        RECORD_SECONDS=3
         RATE = self.getRate() #采样频率
         WAVE_OUTPUT_FILENAME = self.savepath
         p = pyaudio.PyAudio()

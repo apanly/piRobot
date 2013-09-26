@@ -23,8 +23,8 @@ class InstructionSet:
         vs=vsearch()
         print vs.search(self.txt)
         #测试照相功能
-        camtarget=camera()
-        camtarget.do()
+        #camtarget=camera()
+        #camtarget.do()
     def docmdback(self):
         self.pico.onPlayer()
         if self.getCmdFlag()==False:
