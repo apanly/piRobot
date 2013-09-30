@@ -21,3 +21,7 @@ class proofreadClient():
                 return result
         except IOError:
             return txt
+
+
+# target=proofreadClient("看电视")
+# print target.do()
