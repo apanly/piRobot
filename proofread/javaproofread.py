@@ -23,5 +23,5 @@ class proofreadClient():
             return txt
 
 
-# target=proofreadClient("看电视")
+# target=proofreadClient("上一页")
 # print target.do()

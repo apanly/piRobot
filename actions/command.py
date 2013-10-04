@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 from index.infrate import innerInfrated
+from index.ppt import  innerppt
 from tts.picotts import picotts
 from proofread.javaproofread import proofreadClient
 from index.cam import camera
@@ -25,12 +26,17 @@ class InstructionSet:
             self.dotvair(cmddetail)
         elif cmdtype=="air":
             self.dotvair(cmddetail)
+        elif cmdtype=="ppt":
+            self.doppt(cmddetail)
         #测试照相功能
         #camtarget=camera()
         #camtarget.do()
 
     def dotvair(self,command):
         target=innerInfrated()
+        target.gogo(command)
+    def doppt(self,command):
+        target=innerppt()
         target.gogo(command)
 
 

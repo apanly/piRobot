@@ -17,7 +17,8 @@ class Consumer(threading.Thread):
                 wavpath=queue.get()
                 self.debug.saytxt("comsumer file:%s"%wavpath)
                 speech_to_text=google(wavpath,self.debug)
-                command=speech_to_text.sst_google()
+                #command=speech_to_text.sst_google()
+                command="下一页"
                 os.remove(wavpath)
                 if command:
                     self.debug.saytxt(command)
