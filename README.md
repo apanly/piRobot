@@ -12,6 +12,7 @@
 * Internet connection
 * gntp
 * wolframalpha
+* requests
 
 #linux依赖包
 * growl for linux
