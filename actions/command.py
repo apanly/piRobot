@@ -5,7 +5,7 @@ from index.infrate import innerInfrated
 from index.ppt import  innerppt
 from tts.picotts import picotts
 from proofread.javaproofread import proofreadClient
-from index.cam import camera
+#from index.cam import camera
 
 class InstructionSet:
 

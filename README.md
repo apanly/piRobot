@@ -6,13 +6,16 @@
 #开发语言
 * python
 
-#python依赖包
-* pyaudio
+#python依赖包(推荐使用easy_install安装依赖)
+* requests
+* pyzmq
+* pyaudio(如若提示portaudio错误，请安装就可以了)
+* PIL(Python Imaging Library)
+* v4l2capture
 * wave
 * Internet connection
 * gntp
 * wolframalpha
-* requests
 
 #linux依赖包
 * growl for linux
