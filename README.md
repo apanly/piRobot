@@ -62,6 +62,7 @@
     Society＆Culture(社会与文化)
 * 静音判断,正在研究vad技术
 * 中文文本自动纠错
+* 语音识别可以修改成Kaldi(google被墙了)
 
 
 #参考文档如下
@@ -84,6 +85,7 @@
 * [浅谈中文文本自动纠错在影视剧搜索中应用与Java实现]http://www.cnblogs.com/wuren/archive/2012/12/21/2828649.html
 * [espeak跨平台语音合成器](http://www.oschina.net/p/espeak/)
 * [Raspberry Pi创意大荟萃](http://guiquanz.github.io/2013/01/04/projects-of-raspberry-pi/)
+* [几个常见的语音交互平台的简介和比较](http://blog.csdn.net/lchunli/article/details/18504799)
 
 #How to Contact
 ##QQ:36405410
