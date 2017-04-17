@@ -12,7 +12,7 @@ Running PyAudio-0.2.7/setup.py -q bdist_egg --dist-dir /var/folders/vg/98k5hfl52
 warning: no files found matching '*.c' under directory 'test'
 clang: warning: argument unused during compilation: '-mno-fused-madd'
 src/_portaudiomodule.c:29:10: fatal error: 'portaudio.h' file not found
-#include "portaudio.h"
+# include "portaudio.h"
          ^
 1 error generated.
 
@@ -22,7 +22,7 @@ src/_portaudiomodule.c:29:10: fatal error: 'portaudio.h' file not found
 * 安装PIL，遇到以下错误(on max os)
 clang: warning: argument unused during compilation: '-mno-fused-madd'
 _imagingft.c:73:10: fatal error: 'freetype/fterrors.h' file not found
-#include <freetype/fterrors.h>
+# include <freetype/fterrors.h>
          ^
 1 error generated.
 
